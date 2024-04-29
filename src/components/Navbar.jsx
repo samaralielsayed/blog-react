@@ -7,6 +7,8 @@ export default function Navbar() {
   const { pathname } = useLocation();
   console.log(pathname)
   const auth = localStorage.getItem("token");
+  const userId=localStorage.getItem("userId");
+  const image=localStorage.getItem("image");
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("token");
@@ -47,7 +49,7 @@ export default function Navbar() {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      src={image}
                     />
                   </div>
                 </div>
@@ -63,7 +65,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link to={'/my-posts/:id'}>My Posts</Link>
+                    <Link to={`/my-posts/${userId}`}>My Posts</Link>
                   </li>
                   <li>
                     <p onClick={logout}>Logout</p>
@@ -71,7 +73,7 @@ export default function Navbar() {
                 </ul>
               </div>
             ) : (
-              <div className="flex justify-between w-32y">
+              <div className="flex justify-between w-32">
                 <Link className="" to={"/login"}>
                   SignIn
                 </Link>

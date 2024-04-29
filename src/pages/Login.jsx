@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { object, string } from "yup";
 import { toast } from "react-toastify";
@@ -27,13 +27,11 @@ const Login = () => {
     if (err.password) {
       toast.error(err.password);
     }
-   
   }, [err]);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,18 +44,19 @@ const Login = () => {
         "http://localhost:3000/api/users/login",
         inputs
       );
-     
+
       if (response.data.status === "success") {
-       
         localStorage.setItem("token", response.data["token"]);
+        localStorage.setItem("userId", response.data.user["_id"]);
+        localStorage.setItem("image", response.data.user["image"]);
         // let expirationDate = new Date(new Date().getTime() + (60000 * 60))
         // let tokenExpir = {
         //   value: response['token'],
         //   expirationDate: expirationDate.toISOString()
         // }
-        
+
         // sessionStorage.setItem('token', response.data['token']);
-  
+
         navigate("/");
         toast.success("Successfully Login!");
       }
@@ -77,30 +76,47 @@ const Login = () => {
   };
   return (
     <>
-    <h1 className="font-bold text-black flex justify-center my-10 text-4xl italic  ">Login </h1>
-    <div className="flex justify-center items-center ">
-      <div className="bg-gray-200 p-10 mb-10 rounded-xl shadow-md ">
-      
-      <form className="flex flex-col w-96 font-bold  "   onSubmit={handleSubmit}>
-      
-        <label className=" text-slate-800 opacity-90 mb-2 ">Email</label>
-        <input id="dscription" type="text"  className="input input-bordered w-full  h-11 bg-neutral-100"  
-            name="email"
-            onChange={handleChange}/>
-        
+      <h1 className="font-bold text-black flex justify-center my-10 text-4xl italic  ">
+        Login{" "}
+      </h1>
+      <div className="flex justify-center items-center ">
+        <div className="bg-gray-200 p-10 mb-10 rounded-xl shadow-md ">
+          <form
+            className="flex flex-col w-96 font-bold  "
+            onSubmit={handleSubmit}
+          >
+            <label className=" text-slate-800 opacity-90 mb-2 ">Email</label>
+            <input
+              id="dscription"
+              type="text"
+              className="input input-bordered w-full  h-11 bg-neutral-100"
+              name="email"
+              onChange={handleChange}
+            />
 
-        <label className="mt-6 text-slate-800 opacity-90 mb-2">Password</label>
-        <input id="dscription" type="password"  className="input input-bordered w-full  h-11 bg-neutral-100"
-            name="password"
-            onChange={handleChange}/>
-        {/* <input type="file"  className="input input-bordered w-full " /> */}
+            <label className="mt-6 text-slate-800 opacity-90 mb-2">
+              Password
+            </label>
+            <input
+              id="dscription"
+              type="password"
+              className="input input-bordered w-full  h-11 bg-neutral-100"
+              name="password"
+              onChange={handleChange}
+            />
+            {/* <input type="file"  className="input input-bordered w-full " /> */}
 
-        <button className="btn mt-6">Login</button>
-        <p className="ps-3 pt-1 font-semibold">  Don't you have an account?<Link to="/register" className="text-blue-500">Register</Link></p>
-      </form>
+            <button className="btn mt-6">Login</button>
+            <p className="ps-3 pt-1 font-semibold">
+              {" "}
+              Don't you have an account?
+              <Link to="/register" className="text-blue-500">
+                Register
+              </Link>
+            </p>
+          </form>
+        </div>
       </div>
-   </div>
-   
     </>
   );
 };

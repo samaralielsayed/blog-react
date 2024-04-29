@@ -41,7 +41,7 @@ export default function EditPost() {
           },
         }
       );
-      //   navigate("/");
+        navigate("/");
       // Toast
       toast.success("Product update successfully!");
     } catch (error) {
