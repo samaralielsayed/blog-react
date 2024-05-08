@@ -76,7 +76,7 @@ export default function FormPost() {
 
   return (
     <>
-      <h1 className="font-bold text-black flex justify-center my-10 text-4xl italic   ">
+      <h1 className="font-bold text-slate-600 flex justify-center my-10 text-4xl italic   ">
         ADD NEW POST{" "}
       </h1>
       <div className="flex justify-center items-center ">
@@ -89,7 +89,7 @@ export default function FormPost() {
             <input
               id="title"
               type="text"
-              className="input input-bordered w-full  h-11 bg-neutral-100 "
+              className="input input-bordered w-full  h-11 bg-neutral-100  text-slate-600"
               value={title}
               onChange={(e) => {
                 setTitle(e.target.value);
@@ -103,7 +103,7 @@ export default function FormPost() {
             <input
               id="dscription"
               type="text"
-              className="input input-bordered w-full  h-11 bg-neutral-100"
+              className="input input-bordered w-full  h-11 bg-neutral-100 text-slate-600"
               value={description}
               onChange={(e) => {
                 setDescription(e.target.value);
@@ -119,7 +119,7 @@ export default function FormPost() {
             <input
               id="image"
               type="file"
-              className="file-input file-input-bordered w-full h-11 bg-neutral-100 "
+              className="file-input file-input-bordered w-full h-11 bg-neutral-100  text-slate-600"
               onChange={(e) => {
                 console.log(e.target.files[0]);
                 setImage(e.target.files[0]);
@@ -128,7 +128,7 @@ export default function FormPost() {
             {err.image && <span className="text-red-700 ps-3 font-semibold">* {err.image} </span>}
             {/* <input type="file"  className="input input-bordered w-full " /> */}
 
-            <button className="btn mt-6">Sumbit</button>
+            <button className="btn mt-6  text-gray-300 bg-slate-800 hover:bg-slate-700">Sumbit</button>
           </form>
         </div>
       </div>

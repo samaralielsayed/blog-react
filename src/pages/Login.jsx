@@ -76,7 +76,7 @@ const Login = () => {
   };
   return (
     <>
-      <h1 className="font-bold text-black flex justify-center my-10 text-4xl italic  ">
+      <h1 className="font-bold text-slate-600 flex justify-center my-10 text-4xl italic  ">
         Login{" "}
       </h1>
       <div className="flex justify-center items-center ">
@@ -89,7 +89,7 @@ const Login = () => {
             <input
               id="dscription"
               type="text"
-              className="input input-bordered w-full  h-11 bg-neutral-100"
+              className="input input-bordered w-full  h-11 bg-neutral-100 text-slate-600"
               name="email"
               onChange={handleChange}
             />
@@ -100,14 +100,14 @@ const Login = () => {
             <input
               id="dscription"
               type="password"
-              className="input input-bordered w-full  h-11 bg-neutral-100"
+              className="input input-bordered w-full  h-11 bg-neutral-100 text-slate-600"
               name="password"
               onChange={handleChange}
             />
             {/* <input type="file"  className="input input-bordered w-full " /> */}
 
-            <button className="btn mt-6">Login</button>
-            <p className="ps-3 pt-1 font-semibold">
+            <button className="btn mt-6 text-gray-300 bg-slate-800 hover:bg-slate-700">Login</button>
+            <p className="ps-3 pt-1 font-semibold text-gray-500">
               {" "}
               Don't you have an account?
               <Link to="/register" className="text-blue-500">

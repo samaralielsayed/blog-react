@@ -17,7 +17,7 @@ export default function Navbar() {
   if (withouSidebarRoutes.some((item) => pathname === item)) return null;
   return (
     <>
-      <section className="bg-black ">
+      <section className="bg-slate-800">
         <div className="navbar  container mx-auto  text-gray-300 ">
           <div className="flex-1 ">
             <Link to={"/"} className="btn btn-ghost text-xl ">
@@ -40,7 +40,7 @@ export default function Navbar() {
             </div> */}
 
             {auth ? (
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end ">
                 <div
                   tabIndex={0}
                   role="button"
@@ -56,7 +56,7 @@ export default function Navbar() {
 
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content text-gray-300 bg-slate-800  rounded-box w-52"
                 >
                   <li>
                     <Link className="justify-between" to={"/profile"}>
