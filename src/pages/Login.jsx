@@ -76,13 +76,15 @@ const Login = () => {
   };
   return (
     <>
+    
+
       <h1 className="font-bold text-slate-600 flex justify-center my-10 text-4xl italic  ">
         Login{" "}
       </h1>
       <div className="flex justify-center items-center ">
         <div className="bg-gray-200 p-10 mb-10 rounded-xl shadow-md ">
           <form
-            className="flex flex-col w-96 font-bold  "
+            className="flex flex-col  md:w-96 font-bold  sm:w-60"
             onSubmit={handleSubmit}
           >
             <label className=" text-slate-800 opacity-90 mb-2 ">Email</label>
@@ -117,6 +119,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+    
     </>
   );
 };

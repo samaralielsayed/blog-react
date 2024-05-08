@@ -91,7 +91,7 @@ export default function EditPost() {
         <div className="bg-gray-200 p-10 my-10 rounded-xl shadow-md   ">
         {/* <h1 className=" text-white  text-2xl absolute -top-14 font-bold left-0 border rounded-full  bg-black py-2 px-5 ">Update Post </h1> */}
           <form
-            className="flex flex-col w-96 font-bold  "
+            className="flex flex-col md:w-96 sm:w-60 font-bold  "
             onSubmit={handleEditSubmit}
           >
             <label className="text-slate-800 opacity-90 mb-2">Title Post</label>

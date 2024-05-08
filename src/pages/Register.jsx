@@ -92,7 +92,7 @@ const Register = () => {
     <div className="flex justify-center items-center ">
       <div className="bg-gray-200 p-10 mb-10 rounded-xl shadow-md ">
       
-      <form className="flex flex-col w-96 font-bold  "  onSubmit={handleSubmit}>
+      <form className="flex flex-col md:w-96 sm:w-60 font-bold "  onSubmit={handleSubmit}>
         <label  className="text-slate-800 opacity-90 mb-2 text-salte-800" >Name</label>
         <input id="title" type="text"  className="input input-bordered w-full  h-11 bg-neutral-100 text-slate-600" 
              name="name"

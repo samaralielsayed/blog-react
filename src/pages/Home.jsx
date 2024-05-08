@@ -175,7 +175,7 @@ export default function Home() {
           {/* <div className= { numperOfItemsPostInPage >3 ? 'grid sm:grid-cols-1  xl:grid-cols-3 md:grid-cols-2 gap-8 my-8':` grid  grid-cols-1  gap-8  my-8`}> */}
           {posts.map((post) => (
             <div
-              className=" card  w-96 bg-slate-800 shadow-xl relative  text-gray-300"
+              className=" card  w-96  md:w-96 bg-slate-800 shadow-xl relative  text-gray-300 "
               key={post._id}
             >
               <figure className="hover:opacity-60 h-60">
