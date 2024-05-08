@@ -35,8 +35,9 @@ export default function FormPost() {
         abortEarly: false,
       });
       console.log("validationResult ", validationResult);
+      //http://localhost:8000/api
       const response = await axios.post(
-        "http://localhost:8000/api/posts",
+        "https://blog-api-node-js-1.onrender.com/api/posts",
         formData,
         {
           headers: {

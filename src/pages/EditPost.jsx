@@ -21,7 +21,7 @@ export default function EditPost() {
 
   useEffect(() => {
     async function getPostById() {
-      const { data } = await axios.get(`http://localhost:8000/api/posts/${id}`);
+      const { data } = await axios.get(`https://blog-api-node-js-1.onrender.com/api/posts/${id}`);
       console.log(data);
       setTitle(data.post.title);
       setDescription(data.post.description);
@@ -48,8 +48,9 @@ export default function EditPost() {
       const validationResult = await RegisterSchema.validate(formValues, {
         abortEarly: false,
       });
+      //http://localhost:8000/api
       const { data } = await axios.patch(
-        `http://localhost:8000/api/posts/${id}`,
+        `https://blog-api-node-js-1.onrender.com/api/posts/${id}`,
         validationResult,
         {
           headers: {
@@ -57,6 +58,7 @@ export default function EditPost() {
           },
         }
       );
+      
         navigate("/");
       // Toast
       toast.success("Product update successfully!");
