@@ -17,8 +17,8 @@ export default function Navbar() {
   if (withouSidebarRoutes.some((item) => pathname === item)) return null;
   return (
     <>
-      <section className="bg-base-100">
-        <div className="navbar  container mx-auto   ">
+      <section className="bg-black ">
+        <div className="navbar  container mx-auto  text-gray-300 ">
           <div className="flex-1 ">
             <Link to={"/"} className="btn btn-ghost text-xl ">
               Blog Samar
@@ -31,13 +31,13 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex-none  gap-2">
-            <div className="form-control">
+            {/* <div className="form-control">
               <input
                 type="text"
                 placeholder="Search"
                 className="input input-bordered w-24 md:w-auto "
               />
-            </div>
+            </div> */}
 
             {auth ? (
               <div className="dropdown dropdown-end">
