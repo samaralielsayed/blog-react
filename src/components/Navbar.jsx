@@ -73,14 +73,14 @@ export default function Navbar() {
                 </ul>
               </div>
             ) : (
-              <div className="flex justify-between w-32">
+              <div className="flex justify-between ">
                 <Link className="" to={"/login"}>
                   SignIn
                 </Link>
-                <span>OR</span>
+                {/* <span>OR</span>
                 <Link className="" to={"/register"}>
                   SignUp
-                </Link>
+                </Link> */}
                
               </div>
             )}
