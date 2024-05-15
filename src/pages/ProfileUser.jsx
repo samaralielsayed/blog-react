@@ -96,7 +96,7 @@ export default function ProfileUser() {
       <div className="flex justify-center items-center flex-col relative  mb-16">
         <div className="bg-gray-200 p-10 my-10 rounded-xl shadow-md   ">
           <form
-            className="flex flex-col md:w-96 sm:w-60 font-bold  "
+            className="flex flex-col md:w-96 w-60 font-bold  "
             onSubmit={handleEditSubmit}
           >
             <label className="text-slate-800 opacity-90 mb-2">Name</label>
