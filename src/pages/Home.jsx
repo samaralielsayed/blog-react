@@ -181,7 +181,7 @@ export default function Home() {
               key={post._id}
             >
               <figure className="hover:opacity-60 h-60">
-                <img src={post.image} alt="image" />
+                <img src={post.image} alt="image" className="w-full"/>
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-slate-100 ">{post.title}</h2>
