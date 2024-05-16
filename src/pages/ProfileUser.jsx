@@ -20,7 +20,7 @@ export default function ProfileUser() {
         return;
       }
       const { data } = await axios.get(
-        `https://blog-api-node-js-1.onrender.com/api/users/Profile`,
+        `https://blog-api-node-js.onrender.com/api/users/Profile`,
         {
           headers: {
             jwt: token,
@@ -64,7 +64,7 @@ export default function ProfileUser() {
       // formData.append("passwordHash", password);
       //http://localhost:8000/api
       const { data } = await axios.patch(
-        `https://blog-api-node-js-1.onrender.com/api/users/update`,
+        `https://blog-api-node-js.onrender.com/api/users/update`,
         formData,
         {
           headers: {
