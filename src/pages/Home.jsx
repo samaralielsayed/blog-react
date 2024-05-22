@@ -53,11 +53,11 @@ export default function Home() {
       let data ;
       if (id) {
         data = await axios.get(
-          `https://blog-api-node-yz5y.onrender.com/api/users/${id}/posts?limit=6&page=${currentPage}`
+          `https://blog-api-node-damj.onrender.com/api/users/${id}/posts?limit=6&page=${currentPage}`
         );
       } else {
         data = await axios.get(
-          `https://blog-api-node-yz5y.onrender.com/api/posts?limit=6&page=${currentPage}`
+          `https://blog-api-node-damj.onrender.com/api/posts?limit=6&page=${currentPage}`
         );
       }
       if (data.data.status === "success") {
@@ -80,7 +80,7 @@ export default function Home() {
   };
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`https://blog-api-node-yz5y.onrender.com/api/posts/${id}`);
+      const res = await axios.delete(`https://blog-api-node-damj.onrender.com/api/posts/${id}`);
       toast.success("Deleted Successfully", {
         position: "top-right",
       });
@@ -100,7 +100,7 @@ export default function Home() {
       }
 //http://localhost:8000/api
       const { data } = await axios.get(
-        `https://blog-api-node-yz5y.onrender.com/api/users/Profile`,
+        `https://blog-api-node-damj.onrender.com/api/users/Profile`,
         {
           headers: {
             jwt: token,

@@ -42,7 +42,7 @@ const Login = () => {
       });
       //http://localhost:8000/api
       const response = await axios.post(
-        "https://blog-api-node-yz5y.onrender.com/api/users/login",
+        "https://blog-api-node-damj.onrender.com/api/users/login",
         inputs
       );
 

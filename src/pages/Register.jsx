@@ -44,7 +44,7 @@ const Register = () => {
     try {
       //http://localhost:8000/api
         const validationResult = await RegisterSchema.validate(inputs, { abortEarly: false });
-        const response = await axios.post("https://blog-api-node-yz5y.onrender.com/api/users/register", inputs);
+        const response = await axios.post("https://blog-api-node-damj.onrender.com/api/users/register", inputs);
         
         if (response.data.status === "success") {
             navigate("/login");
